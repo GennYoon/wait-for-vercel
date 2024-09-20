@@ -15,8 +15,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      # - name: shellcheck
-      #   uses: reviewdog/action-shellcheck@v1
       - name: Wait for Vercel
         id: wait-for-vercel
         uses: ./
@@ -25,6 +23,7 @@ jobs:
           team-id: ${{ secrets.VERCEL_TEAM_ID }}
           project-id: ${{ secrets.VERCEL_PROJECT_ID }}
           sha: 083a2dd02cdb9a4d306a70eee3a1cf773d1fe038
+          timeout: 60000
       - name: Show output
         run: |
           echo '${{ toJSON(step.wait-for-vercel.outputs) }}'
