@@ -1,5 +1,12 @@
 
 
+## 0.2.1 (2024-09-20)
+
+
+### Bug Fixes
+
+* remove shell file ([031ea2f](https://github.com/GennYoon/wait-for-vercel/commit/031ea2f605882c145bd308a177746afc6b2030ec))
+
 # 0.2.0 (2024-09-20)
 
 
