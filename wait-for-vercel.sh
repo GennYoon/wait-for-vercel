@@ -14,7 +14,7 @@ fi
 
 echo "::debug::Retrieving Deployments from: $request_url"
 
-while [ $deployment_ready == "false" ] && [ "$(($(date +%s) - $start_time))" -lt "$INPUT_TIMEOUT" ]; do
+while [ "$deployment_ready" == "false" ] && [[ "$(($(date +%s) - $start_time))" -lt "$INPUT_TIMEOUT" ]]; do
   echo "::debug::Requesting deployments from: $request_url"
   response=$(curl -s "$request_url" -H "Authorization: Bearer $INPUT_TOKEN") && exit_status=$? || exit_status=$?
 
@@ -76,6 +76,6 @@ EOF
 done
 
 if [ "$deployment_ready" == "false" ]; then
-  echo "::error::Deployment did not become ready within the specified timeout of: $INPUT_TIMEOUT seconds"
+  echo "::error::Deployment did not become ready within the specified timeout of: $INPUT_TIMEOUT seconds, $deployment_ready"
   exit 1
 fi

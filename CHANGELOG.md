@@ -1,5 +1,12 @@
 
 
+## 0.1.3 (2024-09-20)
+
+
+### Bug Fixes
+
+* 비교문 수정2 ([1fb4f57](https://github.com/GennYoon/wait-for-vercel/commit/1fb4f57af9eb65bf72041f7de447857d91c4ac65))
+
 ## 0.1.2 (2024-09-20)
 
 
