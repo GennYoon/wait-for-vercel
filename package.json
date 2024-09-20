@@ -1,11 +1,11 @@
 {
   "name": "wait-for-vercel",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "",
   "repository": "https://github.com/GennYoon/wait-for-vercel",
   "scripts": {
     "release": "release-it",
-    "test": "act --secret-file main.secrets --container-architecture linux/amd64"
+    "test": "act --secret-file main.secrets"
   },
   "keywords": [],
   "author": "GennYoon <yoonwonyoul@webchemist.net>",
