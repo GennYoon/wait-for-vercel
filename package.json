@@ -1,6 +1,6 @@
 {
   "name": "wait-for-vercel",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "",
   "repository": "https://github.com/GennYoon/wait-for-vercel",
   "scripts": {
