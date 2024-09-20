@@ -1,9 +1,6 @@
 name: "wait-for-vercel"
 description: "Wait for Vercel deployment to finish"
 author: "GennYoon"
-branding:
-  icon: "clock"
-  color: "white"
 inputs:
   token:
     description: "Vercel Token"
@@ -54,4 +51,8 @@ runs:
         INPUT_TIMEOUT: ${{ inputs.timeout }}
         INPUT_DELAY: ${{ inputs.delay }}
         INPUT_SHA: ${{ inputs.sha }}
+
+branding:
+  icon: "clock"
+  color: "white"
 

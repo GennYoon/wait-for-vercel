@@ -5,7 +5,7 @@
   "repository": "https://github.com/GennYoon/wait-for-vercel",
   "scripts": {
     "release": "release-it",
-    "test": "act --secret-file main.secrets --container-architecture linux/amd64"
+    "test": "act --secret-file main.secrets"
   },
   "keywords": [],
   "author": "GennYoon <yoonwonyoul@webchemist.net>",
