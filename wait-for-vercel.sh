@@ -3,7 +3,9 @@
 set -euo pipefail
 
 start_time=$(date +%s)
+
 deployment_ready=false
+
 request_url="https://api.vercel.com/v6/deployments?projectId=$INPUT_PROJECT_ID&limit=100"
 
 if [[ -n "$INPUT_TEAM_ID" ]]; then
@@ -12,7 +14,7 @@ fi
 
 echo "::debug::Retrieving Deployments from: $request_url"
 
-while [ $deployment_ready == false ] && [ "$(($(date +%s) - start_time))" -lt "$INPUT_TIMEOUT" ]; do
+while [ $deployment_ready == "false" ] && [ "$(($(date +%s) - $start_time))" -lt "$INPUT_TIMEOUT" ]; do
   echo "::debug::Requesting deployments from: $request_url"
   response=$(curl -s "$request_url" -H "Authorization: Bearer $INPUT_TOKEN") && exit_status=$? || exit_status=$?
 
@@ -47,7 +49,6 @@ while [ $deployment_ready == false ] && [ "$(($(date +%s) - start_time))" -lt "$
   alias_error=$(echo "$deployment" | jq -r '.aliasError')
 
   if [ "$state" = "READY" ]; then
-    echo "::debug::Deployment is ready: $state"
     deployment_ready=true
     cat <<EOF >>"$GITHUB_OUTPUT"
 id=$id
@@ -74,7 +75,7 @@ EOF
   fi
 done
 
-if [ "$deployment_ready" = false ]; then
+if [ "$deployment_ready" == "false" ]; then
   echo "::error::Deployment did not become ready within the specified timeout of: $INPUT_TIMEOUT seconds"
   exit 1
 fi
