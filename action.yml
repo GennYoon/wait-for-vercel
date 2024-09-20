@@ -1,0 +1,57 @@
+name: "wait-for-vercel"
+description: "Wait for Vercel deployment to finish"
+author: "GennYoon"
+branding:
+  icon: "clock"
+  color: "white"
+inputs:
+  token:
+    description: "Vercel Token"
+    required: true
+  project-id:
+    description: "Vercel Project ID"
+    required: true
+  team-id:
+    description: "Vercel Team ID"
+    required: false
+  timeout:
+    description: "Timeout in seconds"
+    required: false
+    default: 600
+  delay:
+    description: "Delay in seconds"
+    required: false
+    default: 10
+  sha:
+    description: "The commit sha to wait for"
+    required: true
+
+outputs:
+  deployment-id:
+    description: 'The deployment id'
+    value: ${{ steps.vercel-wait.outputs.id }}
+  deployment-url:
+    description: 'The deployment url'
+    value: ${{ steps.vercel-wait.outputs.url }}
+  deployment-state:
+    description: 'The deployment state'
+    value: ${{ steps.vercel-wait.outputs.state }}
+  deployment-alias-error:
+    description: 'The deployment alias error'
+    value: ${{ steps.vercel-wait.outputs.alias_error }}
+
+runs:
+  using: "composite"
+  steps:
+    - run: |
+        bash $GITHUB_ACTION_PATH/wait-for-vercel.sh
+      id: vercel-wait
+      shell: bash
+      env:
+        INPUT_TOKEN: ${{ inputs.token }}
+        INPUT_PROJECT_ID: ${{ inputs.project-id }}
+        INPUT_TEAM_ID: ${{ inputs.team-id }}
+        INPUT_TIMEOUT: ${{ inputs.timeout }}
+        INPUT_DELAY: ${{ inputs.delay }}
+        INPUT_SHA: ${{ inputs.sha }}
+
