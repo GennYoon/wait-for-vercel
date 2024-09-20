@@ -1,5 +1,12 @@
 
 
+# 0.2.0 (2024-09-20)
+
+
+### Features
+
+* shell 형태에서 ts 형태로 변경 ([aefc1ed](https://github.com/GennYoon/wait-for-vercel/commit/aefc1ed16272063df9a1e131b32d197d9053b56c))
+
 ## 0.1.3 (2024-09-20)
 
 
