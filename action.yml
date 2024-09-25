@@ -1,4 +1,4 @@
-name: "Wait For Vercel"
+name: "Wait For Vercel Preview using Project ID"
 description: "Wait for Vercel deployment to finish"
 author: "GennYoon"
 inputs:
