@@ -1,5 +1,12 @@
 
 
+## 0.2.3 (2024-09-25)
+
+
+### Bug Fixes
+
+* change name ([b5435d1](https://github.com/GennYoon/wait-for-vercel/commit/b5435d1227baf60fee3652beb4e70822cc6698a7))
+
 ## 0.2.2 (2024-09-25)
 
 
