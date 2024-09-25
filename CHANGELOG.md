@@ -1,5 +1,12 @@
 
 
+## 0.2.2 (2024-09-25)
+
+
+### Bug Fixes
+
+* README.md, LICENSE file ([65ccc51](https://github.com/GennYoon/wait-for-vercel/commit/65ccc5152f60161fbbcaf0afe7767c40029f9d47))
+
 ## 0.2.1 (2024-09-20)
 
 
