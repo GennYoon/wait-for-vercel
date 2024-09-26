@@ -1,5 +1,12 @@
 
 
+# 0.3.0 (2024-09-26)
+
+
+### Features
+
+* modify find deployment ([944d372](https://github.com/GennYoon/wait-for-vercel/commit/944d372006a2dae49f0985c833609a3e0b2c8903))
+
 ## 0.2.3 (2024-09-25)
 
 
