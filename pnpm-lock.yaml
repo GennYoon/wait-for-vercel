@@ -17,6 +17,9 @@ importers:
       axios:
         specifier: ^1.7.3
         version: 1.7.7
+      lodash:
+        specifier: ^4.17.21
+        version: 4.17.21
     devDependencies:
       '@eslint/js':
         specifier: ^9.9.1
@@ -27,6 +30,9 @@ importers:
       '@types/eslint':
         specifier: ^9.6.1
         version: 9.6.1
+      '@types/lodash':
+        specifier: ^4.17.9
+        version: 4.17.9
       '@vercel/ncc':
         specifier: ^0.38.1
         version: 0.38.1
@@ -263,6 +269,9 @@ packages:
 
   '@types/json-schema@7.0.15':
     resolution: {integrity: sha512-5+fP8P8MFNC+AyZCDxrB2pkZFPGzqQWUzpSeuuVLvm8VMcorNYavBqoFcxK8bQz4Qsbn4oUEEem4wDLfcysGHA==}
+
+  '@types/lodash@4.17.9':
+    resolution: {integrity: sha512-w9iWudx1XWOHW5lQRS9iKpK/XuRhnN+0T7HvdCCd802FYkT1AMTnxndJHGrNJwRoRHkslGr4S29tjm1cT7x/7w==}
 
   '@types/normalize-package-data@2.4.4':
     resolution: {integrity: sha512-37i+OaWTh9qeK4LSHPsyRC7NahnGotNuZvjLSgcPzblpHB3rrCJxAOgI5gCdKm7coonsaX1Of0ILiTcnZjbfxA==}
@@ -2156,6 +2165,8 @@ snapshots:
   '@types/http-cache-semantics@4.0.4': {}
 
   '@types/json-schema@7.0.15': {}
+
+  '@types/lodash@4.17.9': {}
 
   '@types/normalize-package-data@2.4.4': {}
 
