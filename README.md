@@ -9,7 +9,7 @@ Please refer to the [release page](https://github.com/GennYoon/wait-for-vercel/r
 # Usage
 
 ```yaml
-- uses: GennYoon/wait-for-vercel@v0.2.1
+- uses: GennYoon/wait-for-vercel@v0.3.0
   id: wait-for-vercel
   with:
     token: ""
